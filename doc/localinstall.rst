@@ -13,9 +13,11 @@ infrastructure. It also makes documentation consistent and reliable.
   All the commands that follow are written to install from the root of your
   project folder.
 
-2. Install Composer, a php package manager::
+2. Check that you have Composer installed by entering the following in Terminal::
 
-     curl -s https://getcomposer.org/installer | php
+    composer
+
+   If you do not see a list of Composer commands, [install Composer](https://getcomposer.org). 
 
 3. Create a composer.json file to tell Composer what to install.  To do that,
    paste the following code into your editor and save as composer.json. The 
@@ -34,8 +36,17 @@ infrastructure. It also makes documentation consistent and reliable.
      :linenos:
      :emphasize-lines: 4
 
-4. Run the following command to install the Drupal Extension and all those
-   dependencies. This takes a while before you start to see output::
+4. Depending on how you installed Composer, run one the following two commands
+   to install the Drupal Extension and all those dependencies. This takes a while 
+   before you start to see output.
+   
+   a. If composer is installed globally on your computer (you can type `composer` in
+      any directory and see the list of composer commands)::
+
+    composer install
+
+   b. If composer is installed directly in your project directory (you see composer
+   commands only when you run `composer` in your project directory)::
 
     php composer.phar install
 
